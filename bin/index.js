@@ -23,4 +23,15 @@ if (yargs.argv.help) {
   process.exit(1);
 }
 
+// sanitize inputs
+var options = {
+  baseDir: [],
+  outputDir: path.resolve(yargs.argv.outputDir)
+};
+
+for (var i = 0; i < yargs.argv.baseDir.length; i++) {
+  options.baseDir.push(path.resolve(yargs.argv.baseDir[i]));
+}
+
 var whoss = require('../src/index');
+whoss(options);

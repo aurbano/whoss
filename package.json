@@ -3,9 +3,9 @@
   "version": "0.0.0-development",
   "description": "",
   "keywords": [],
-  "main": "dist/whoss.umd.js",
-  "module": "dist/whoss.es5.js",
-  "typings": "dist/types/whoss.d.ts",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es5.js",
+  "typings": "dist/types/index.d.ts",
   "files": [
     "dist"
   ],
@@ -74,8 +74,7 @@
         "statements": 95
       }
     },
-    "collectCoverage": true,
-    "mapCoverage": true
+    "collectCoverage": true
   },
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -90,6 +89,7 @@
     "yargs": "^7.0.2"
   },
   "devDependencies": {
+    "@types/bluebird": "^3.5.20",
     "@types/jest": "^22.0.0",
     "@types/node": "^9.3.0",
     "colors": "^1.1.2",
@@ -112,6 +112,7 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.11.1",
     "semantic-release": "^15.1.4",
+    "travis-deploy-once": "^4.4.1",
     "ts-jest": "^22.0.0",
     "ts-node": "^5.0.1",
     "tslint": "^5.8.0",
@@ -119,7 +120,6 @@
     "tslint-config-standard": "^7.0.0",
     "typedoc": "^0.11.0",
     "typescript": "^2.6.2",
-    "validate-commit-msg": "^2.12.2",
-    "travis-deploy-once": "^4.4.1"
+    "validate-commit-msg": "^2.12.2"
   }
 }
