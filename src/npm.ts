@@ -31,7 +31,7 @@ export function getNpmLicenses(options: Options) {
   for (let i = 0; i < npmDirs.length; i++) {
     if (!jetpack.exists(path.join(npmDirs[i], 'package.json'))) {
       console.log(
-        'directory at "' +
+        'Directory at "' +
           npmDirs[i] +
           '" does not look like an NPM project, skipping NPM checks for path ' +
           npmDirs[i]
@@ -54,7 +54,6 @@ export function getNpmLicenses(options: Options) {
           },
           function(err, json) {
             if (err) {
-              //Handle error
               console.error(err)
             } else {
               Object.getOwnPropertyNames(json).forEach(k => {
@@ -73,12 +72,12 @@ export function getNpmLicenses(options: Options) {
 
   return bluebird
     .all(checkers)
-    .then(raw_result => {
+    .then(rawResult => {
       // the result is passed in as an array, one element per npmDir passed in
       // de-dupe the entries and merge it into a single object
       let merged = {}
-      for (let i = 0; i < raw_result.length; i++) {
-        merged = Object.assign(raw_result[i], merged)
+      for (let i = 0; i < rawResult.length; i++) {
+        merged = Object.assign(rawResult[i], merged)
       }
       return merged
     })

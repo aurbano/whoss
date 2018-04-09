@@ -38,7 +38,7 @@ export default function whoss(options: Options) {
       const userOverridesPath = path.join(options.outputDir, 'overrides.json')
       if (jetpack.exists(userOverridesPath)) {
         const userOverrides = jetpack.read(userOverridesPath, 'json')
-        console.log('using overrides:', userOverrides)
+        console.log('Using overrides:', userOverrides)
         // foreach override, loop through the properties and assign them to the base object.
         o = _.defaultsDeep(userOverrides, o)
       }
@@ -52,7 +52,7 @@ export default function whoss(options: Options) {
     .then((licenseInfos: any) => {
       const attributionSequence = _(licenseInfos)
         .filter(
-          (licenseInfo: any) => licenseInfo && !licenseInfo.ignore && licenseInfo.name != undefined
+          (licenseInfo: any) => licenseInfo && !licenseInfo.ignore && licenseInfo.name !== undefined
         )
         .sortBy(licenseInfo => licenseInfo.name.toLowerCase())
         .map((licenseInfo: any) => {
