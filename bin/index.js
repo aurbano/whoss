@@ -33,5 +33,5 @@ for (var i = 0; i < yargs.argv.baseDir.length; i++) {
   options.baseDir.push(path.resolve(yargs.argv.baseDir[i]));
 }
 
-var whoss = require('../src/index');
+var whoss = require('../dist/lib/index');
 whoss(options);
