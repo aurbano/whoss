@@ -1,5 +1,12 @@
 # whoss
-Utility to parse npm and bower packages used in a project and generate an attribution file to include in your product.
+> Utility to parse npm and bower packages used in a project and generate an attribution file to include in your product.
+
+[![Travis](https://img.shields.io/travis/aurbano/whoss.svg)](https://travis-ci.org/aurbano/whoss)
+[![npm](https://img.shields.io/npm/v/whoss.svg)](https://www.npmjs.com/package/whoss)
+[![Coverage Status](https://coveralls.io/repos/github/aurbano/whoss/badge.svg?branch=master)](https://coveralls.io/github/aurbano/whoss?branch=master)
+[![npm](https://img.shields.io/npm/dm/whoss.svg)](https://www.npmjs.com/package/whoss)
+[![npm](https://img.shields.io/npm/l/whoss.svg)](https://www.npmjs.com/package/whoss)
+[![Codacy grade](https://img.shields.io/codacy/grade/e2589a609bdc4c56bd49c232a65dab4e.svg)](https://www.codacy.com/app/aurbano/whoss)
 
 ## Installation
 
