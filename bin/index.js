@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// usage
+var path = require('path');
 var yargs = require('yargs')
   .usage('Calculate the npm and bower modules used in this project and generate a third-party attribution (credits) text.',
     {
@@ -33,5 +33,5 @@ for (var i = 0; i < yargs.argv.baseDir.length; i++) {
   options.baseDir.push(path.resolve(yargs.argv.baseDir[i]));
 }
 
-var whoss = require('../dist/lib/index');
+var whoss = require('../dist/index.umd');
 whoss(options);

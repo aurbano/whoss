@@ -7,31 +7,23 @@ import taim from 'taim'
 
 import { Options, DEFAULT_SEPARATOR } from './constants'
 import { getNpmLicenses } from './npm'
-import { getBowerLicenses } from './bower'
 
 /**
  * whoss
  *
- * Utility to parse npm and bower packages used in a project and generate an attribution file to include in your product.
+ * Utility to parse npm packages used in a project and generate an attribution file to include in your product.
  *
  */
 export default function whoss(options: Options) {
-  taim(
-    'Total Processing',
-    bluebird.all([
-      taim('Npm Licenses', getNpmLicenses(options)),
-      taim('Bower Licenses', getBowerLicenses(options))
-    ])
-  )
+  taim('Total Processing', bluebird.all([taim('Npm Licenses', getNpmLicenses(options))]))
     .catch(err => {
       console.log(err)
       process.exit(1)
     })
-    .spread((npmOutput, bowerOutput) => {
+    .spread(npmOutput => {
       let o = {}
       npmOutput = npmOutput || {}
-      bowerOutput = bowerOutput || {}
-      _.concat(npmOutput, bowerOutput).forEach(v => {
+      _.concat(npmOutput).forEach(v => {
         o[v.name] = v
       })
 

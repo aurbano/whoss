@@ -1,5 +1,5 @@
 # whoss
-> Utility to parse npm and bower packages used in a project and generate an attribution file to include in your product.
+> Utility to parse npm packages used in a project and generate an attribution file to include in your product.
 
 [![Travis](https://img.shields.io/travis/aurbano/whoss.svg)](https://travis-ci.org/aurbano/whoss)
 [![npm](https://img.shields.io/npm/v/whoss.svg)](https://www.npmjs.com/package/whoss)
@@ -33,7 +33,7 @@ yarn global add whoss
 
 ## Usage
 
-### For a single Bower or Node project
+### For a single Node project
 ```
 cd pathToYourProject
 whoss
